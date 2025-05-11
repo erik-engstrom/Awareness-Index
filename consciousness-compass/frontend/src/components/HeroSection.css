@@ -1,0 +1,301 @@
+/* Hero image animation */
+@keyframes heroImageFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-image {
+  opacity: 0;
+  animation: heroImageFadeIn 1.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.fade-up-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-up-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.fade-up-delay-3 {
+  animation-delay: 0.6s;
+}
+
+/* Subtle floating animation for the logo */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+header img {
+  animation: float 6s ease-in-out infinite, fadeUp 0.8s ease-out forwards;
+}
+
+/* Glowing effect for nav items on hover */
+nav a:hover {
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.6);
+}
+
+/* Add some subtle movement to the background image */
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-image {
+  animation: heroImageFadeIn 1.8s ease-out forwards, slowZoom 30s ease-in-out infinite;
+}
+
+/* Star field backgrounds */
+.stars-small,
+.stars-medium,
+.stars-large {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+.stars-small {
+  background-image: 
+    radial-gradient(1px 1px at 25px 5px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1px 1px at 50px 25px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1px 1px at 125px 20px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1.5px 1.5px at 50px 75px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2px 2px at 15px 125px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2.5px 2.5px at 110px 80px, white, rgba(255, 255, 255, 0));
+  animation-delay: 0.2s;
+}
+
+.stars-medium {
+  background-image: 
+    radial-gradient(2px 2px at 75px 125px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2px 2px at 100px 150px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2.5px 2.5px at 175px 50px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2.5px 2.5px at 20px 50px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(3px 3px at 150px 100px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(4px 4px at 50px 180px, white, rgba(255, 255, 255, 0));
+  background-size: 400px 400px;
+  animation-delay: 0.4s;
+}
+
+.stars-large {
+  background-image: 
+    radial-gradient(4px 4px at 150px 400px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(6px 6px at 350px 250px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(8px 8px at 250px 150px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(10px 10px at 15px 225px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(6px 6px at 375px 400px, white, rgba(255, 255, 255, 0));
+  background-size: 600px 600px;
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* Glow effect */
+.glow-effect {
+  background: radial-gradient(circle at center, rgba(88, 120, 188, 0.2) 0%, transparent 70%);
+  mix-blend-mode: screen;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/* Card hover effects */
+.hover\:translate-y-\[-5px\]:hover {
+  box-shadow: 0 15px 30px -10px rgba(66, 71, 122, 0.5);
+}
+
+/* Centered content container with glass effect */
+.content-container {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(30, 41, 59, 0.2) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.carousel-viewport {
+  position: relative;
+  overflow: visible;
+  padding: 1.5rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+/* Peek-a-boo effect */
+.carousel-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.carousel-mask-left {
+  left: 0;
+  background: linear-gradient(to right, #13151f 20%, rgba(19, 21, 31, 0));
+}
+
+.carousel-mask-right {
+  right: 0;
+  background: linear-gradient(to left, #13151f 20%, rgba(19, 21, 31, 0));
+}
+
+.carousel-nav button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+/* Animation for slide transitions */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Active and inactive slide styling */
+.carousel-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.carousel-slide-inactive {
+  opacity: 0.5;
+  transform: scale(0.92);
+  z-index: 0;
+  filter: blur(1px);
+}
+
+/* Interactive slide effects */
+.carousel-slide:hover {
+  transition: all 0.3s ease-out;
+}
+
+.carousel-slide-inactive:hover {
+  opacity: 0.7;
+  transform: scale(0.95);
+  filter: blur(0px);
+}
+
+/* Pulse animation for indicators */
+@keyframes indicatorPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.carousel-indicators button.bg-amber-300 {
+  animation: indicatorPulse 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}
